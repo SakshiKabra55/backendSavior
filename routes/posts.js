@@ -33,8 +33,8 @@ router.get('/donorFeed',require('./donorFeed'));
 router.get('/adoptedStudents',authentication.verifyToken,require('./getAdoptedStudents'));
 router.get('/studentProfile',authentication.verifyToken,require('./studentProfile'));
 
-//router.post('/payment',authentication.verifyToken, require('./payment'));
-//router.post('/verification',authentication.verifyToken, require('./paymentVerification'));
+router.post('/payment',authentication.verifyToken, require('./payment'));
+router.post('/verification',authentication.verifyToken, require('./paymentVerification'));
 router.get('/addStudent',authentication.verifyToken,require('./addStudent'));
 
 //index.html is temporary, connect with frontend

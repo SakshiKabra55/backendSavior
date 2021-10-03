@@ -2,7 +2,7 @@ const Razorpay = require('razorpay');
 
 module.exports = async (req, res) => {
 
-    const secret = ''
+    const secret = 'nevertellyourcode'
 
     console.log(req.body)
 

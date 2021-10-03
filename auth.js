@@ -4,7 +4,7 @@ let nope = process.env.AUTH_secret;
 class Authentication{
     createToken(payload){
         let jwtOptions = { expiresIn: 60*60*12 };
-        let token = jwt.sign( payload, nope, jwtOptions );
+        let token = jwt.sign( payload, 'nevertellyourcode', jwtOptions );
         return token;
     };
     

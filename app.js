@@ -23,7 +23,8 @@ const postsRoute = require('./routes/posts');
 app.use('/',postsRoute);
 
 mongoose.connect(
-    process.env.DB_Connection,
+    'mongodb+srv://Sakshi:Test123@cluster0.oj4bi.mongodb.net/saviorDB',
+    //process.env.DB_Connection,
     {
     useNewUrlParser:true,
     useUnifiedTopology:true
@@ -31,11 +32,6 @@ mongoose.connect(
     () => console.log('connected to DB!')
 )
 
-let port = process.env.PORT;
-if(port == null || port == ""){
-    port = 3000;
-}
-
-app.listen(port, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log("Server started successfully")
 });
